@@ -9,24 +9,37 @@ importers:
   .:
     dependencies:
       mupdf:
-        specifier: ^1.3.6
-        version: 1.3.6
+        specifier: ^1.26.2
+        version: 1.26.2
     devDependencies:
       shadow-cljs:
-        specifier: ^3.0.4
-        version: 3.0.4
+        specifier: ^3.1.7
+        version: 3.1.7
 
 packages:
 
+  base64-js@1.5.1:
+    resolution: {integrity: sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==}
+
   buffer-from@1.1.2:
     resolution: {integrity: sha512-E+XQCRwSbaaiChtv6k6Dwgc+bx+Bs6vuKJHHl5kox/BaKbhiXzqQOwK4cO22yElGp2OCmjwVhT3HmxgyPGnJfQ==}
+
+  buffer@6.0.3:
+    resolution: {integrity: sha512-FTiCpNxtwiZZHEZbcbTIcZjERVICn9yq/pDFkTl95/AxzD1naBctN7YO68riM/gLSDY7sdrMby8hofADYuuqOA==}
+
+  ieee754@1.2.1:
+    resolution: {integrity: sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==}
 
   isexe@3.1.1:
     resolution: {integrity: sha512-LpB/54B+/2J5hqQ7imZHfdU31OlgQqx7ZicVlkm9kzg9/w8GKLEcFfJl/t7DCEDueOyBAD6zCCwTO6Fzs0NoEQ==}
     engines: {node: '>=16'}
 
-  mupdf@1.3.6:
-    resolution: {integrity: sha512-HRKjlFiD1aN9u2iX7JCIr6qU6jMnihsQY2GnNVcrXXM1BBh3es1166mjMVsdjnhUfnA2NQr4pJBmUjFCxQ/N4A==}
+  mupdf@1.26.2:
+    resolution: {integrity: sha512-BYSTaIyHnSkkZog+Bh+VRT+TPguqt3MPiOkOdXJaWnr55lwHAe6/vF+WXKjncOOPXeQeDrXbypnxIv4eUBirSA==}
+
+  process@0.11.10:
+    resolution: {integrity: sha512-cdGef/drWFoydD1JsMzuFf8100nZl+GT+yacc2bEced5f9Rjk4z+WtFUTBu9PhOi9j/jfmBPu0mMEY4wIdAF8A==}
+    engines: {node: '>= 0.6.0'}
 
   readline-sync@1.4.10:
     resolution: {integrity: sha512-gNva8/6UAe8QYepIQH/jQ2qn91Qj0B9sYjMBBs3QOB8F2CXcKgLxQaJRP76sWVRQt+QU+8fAkCbCvjjMFu7Ycw==}
@@ -35,8 +48,8 @@ packages:
   shadow-cljs-jar@1.3.4:
     resolution: {integrity: sha512-cZB2pzVXBnhpJ6PQdsjO+j/MksR28mv4QD/hP/2y1fsIa9Z9RutYgh3N34FZ8Ktl4puAXaIGlct+gMCJ5BmwmA==}
 
-  shadow-cljs@3.0.4:
-    resolution: {integrity: sha512-pj/3rV1y/xcVdBasuritKasgl6ekIAFjipMJMPVHvl/MMxwAml7U8SNQ4YRIhafgLDIEbn8zGSh9bbtrdoGXjA==}
+  shadow-cljs@3.1.7:
+    resolution: {integrity: sha512-q1SCy5m5EpNfrn6C0vKa2ho6gwW6rdSU1Ge22HbbZ813TpR/1hBXdlgTF2RE49yIqJxxhVtfcLz0jWa0Ul32IQ==}
     engines: {node: '>=6.0.0'}
     hasBin: true
 
@@ -66,18 +79,31 @@ packages:
 
 snapshots:
 
+  base64-js@1.5.1: {}
+
   buffer-from@1.1.2: {}
+
+  buffer@6.0.3:
+    dependencies:
+      base64-js: 1.5.1
+      ieee754: 1.2.1
+
+  ieee754@1.2.1: {}
 
   isexe@3.1.1: {}
 
-  mupdf@1.3.6: {}
+  mupdf@1.26.2: {}
+
+  process@0.11.10: {}
 
   readline-sync@1.4.10: {}
 
   shadow-cljs-jar@1.3.4: {}
 
-  shadow-cljs@3.0.4:
+  shadow-cljs@3.1.7:
     dependencies:
+      buffer: 6.0.3
+      process: 0.11.10
       readline-sync: 1.4.10
       shadow-cljs-jar: 1.3.4
       source-map-support: 0.5.21

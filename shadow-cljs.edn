@@ -1,5 +1,5 @@
 ;; shadow-cljs configuration
-{:source-paths ["src/quickread"]
+{:source-paths ["src"]
  :dependencies
  [[cider/cider-nrepl "0.55.7"]
   [refactor-nrepl/refactor-nrepl "3.9.0"]]
