@@ -20,12 +20,7 @@
   {:target :esm
    :output-dir "public/js"
    :asset-path "/js"
-   :modules {:quickread
+   :modules {:main
              {:init-fn quickread.core/run}}
-   :js-options {:js-provider :import}
-   ;; {:js-provider :external
-   ;;  :external-index "build/index.js"
-   ;;  :external-index-format :esm}
-
    :devtools {:repl-init-ns quickread.core
               :repl-pprint true}}}}
