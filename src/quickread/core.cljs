@@ -1,6 +1,16 @@
 (ns quickread.core
   (:require
-   ["esm:../lib/mupdf.js" :as mupdf]))
+   [reagent.core :as r]
+   [reagent.dom.client :as rdc]
+   ["esm:./lib/mupdf.js" :as mupdf]))
 
 (defn hello []
-  (println "Hello, World!"))
+  (print "Hello, World!"))
+
+(defn app []
+  [:p "Hello!"])
+
+(defonce react-root (rdc/create-root (.getElementById js/document "quickread")))
+
+(defn run []
+  (rdc/render react-root [app]))
