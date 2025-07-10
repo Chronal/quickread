@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: mediumpurple;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10% 20% 10% 20%;
+    padding: 2.5%;
+    background-color: lightblue;
+    border-color: black;
+    border-radius: 1em;
+}
+
+.toc {
+
+}
